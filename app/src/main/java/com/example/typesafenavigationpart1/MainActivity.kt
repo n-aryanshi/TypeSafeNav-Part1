@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.typesafenavigationpart1.presentation.navigation.NavGraph
 import com.example.typesafenavigationpart1.ui.theme.TypeSafeNavigationPart1Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +21,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TypeSafeNavigationPart1Theme {
+
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    val navController = rememberNavController()
+                    NavGraph(navController = navController, modifier = Modifier,innerPadding)
 
                 }
             }
