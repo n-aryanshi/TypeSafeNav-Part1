@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
 
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val navController = rememberNavController()
-                    NavGraph(navController = navController, modifier = Modifier,innerPadding)
+                    NavGraph(navController = navController, modifier = Modifier.padding(innerPadding))
 
                 }
             }
